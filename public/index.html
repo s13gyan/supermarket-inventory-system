@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2>SuperMart</h2>
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#inventory">Inventory</a>
+                <a href="#add-product">Add Product</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <header>
+                <h1>Supermarket Dashboard</h1>
+                <p>Inventory management system</p>
+            </header>
+
+            <section id="dashboard" class="stats">
+
+                <div class="stat-card">
+                    <h3>Total Products</h3>
+                    <p id="total-products">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Stock</h3>
+                    <p id="total-stock">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Stock Value</h3>
+                    <p id="stock-value">GH₵ 0.00</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Sales</h3>
+                    <p id="total-sales">GH₵ 0.00</p>
+                </div>
+
+            </section>
+
+            <section id="add-product" class="form-section">
+                <h2>Add New Product</h2>
+
+                <form id="product-form">
+                    <input type="text" id="name" placeholder="Product Name" required>
+                    <input type="text" id="sku" placeholder="Product SKU" required>
+                    <input type="text" id="category" placeholder="Category">
+                    <input type="number" id="price" placeholder="Price (GH₵)" min="0" step="0.01" required>
+                    <input type="number" id="quantity" placeholder="Quantity" min="0" step="1" required>
+
+                    <button type="submit">Add Product</button>
+                </form>
+            </section>
+
+            <section id="inventory" class="inventory-section">
+                <h2>Product Inventory</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>SKU</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="products-table">
+                        <tr>
+                            <td colspan="5">Loading products...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
