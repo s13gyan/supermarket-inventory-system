@@ -60,6 +60,26 @@ header h1 {
     margin-bottom: 8px;
 }
 
+.header-row,
+.account-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.account-controls {
+    justify-content: flex-end;
+}
+
+.secondary-button {
+    background: #29466f;
+}
+
+.secondary-button:hover {
+    background: #203958;
+}
+
 /* Dashboard cards */
 .stats {
     display: grid;
@@ -174,4 +194,60 @@ th {
     #product-form {
         grid-template-columns: 1fr;
     }
+
+    .header-row,
+    .account-controls {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.login-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.login-card {
+    width: min(100%, 420px);
+    padding: 36px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(23, 43, 77, 0.12);
+}
+
+.login-card h1 {
+    margin: 8px 0;
+}
+
+.brand-mark {
+    color: #16a34a;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-intro {
+    color: #666;
+    margin-bottom: 24px;
+}
+
+#login-form {
+    display: grid;
+    gap: 12px;
+}
+
+#login-form label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#login-form button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.form-error {
+    min-height: 20px;
+    color: #b91c1c;
 }

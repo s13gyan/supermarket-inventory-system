@@ -14,6 +14,7 @@ RUN npm ci --omit=dev
 # Copy application source code
 COPY src/ ./src/
 COPY public/ ./public/
+COPY database/ ./database/
 
 # Run the application as a non-root user
 USER node
